@@ -18,14 +18,14 @@ func reverseList(head *ListNode) *ListNode {
 	if head == nil {
 		return head
 	}
-	tempHead := head
-	head1 := head
+	prv := head
+	nxt := head
 
-	for head1.Next != nil {
-		head = head1.Next
-		head1.Next = head.Next
-		head.Next = tempHead
-		tempHead = head
+	for nxt.Next != nil {
+		head = nxt.Next
+		nxt.Next = head.Next
+		head.Next = prv
+		prv = head
 	}
 
 	return head
