@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -39,6 +38,6 @@ func minSubArrayLen(target int, nums []int) int {
 	return 0
 }
 
-func main() {
-	fmt.Println(minSubArrayLen(7, []int{2, 3, 1, 2, 4, 3}))
-}
+// func main() {
+// 	fmt.Println(minSubArrayLen(7, []int{2, 3, 1, 2, 4, 3}))
+// }
