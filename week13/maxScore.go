@@ -1,7 +1,7 @@
 package main
 
 func maxScore(cardPoints []int, k int) int {
-
+	n := len(cardPoints)
 	curTotal := 0
 
 	for i := 0; i < k; i++ {
@@ -9,9 +9,9 @@ func maxScore(cardPoints []int, k int) int {
 	}
 
 	maxTotal := curTotal
-	for i := 0; i < k; i++ {
-		curTotal -= cardPoints[k-i-1]
-		curTotal += cardPoints[len(cardPoints)-i-1]
+	for i := 1; i <= k; i++ {
+		curTotal -= cardPoints[k-i]
+		curTotal += cardPoints[n-i]
 		if curTotal > maxTotal {
 			maxTotal = curTotal
 		}
